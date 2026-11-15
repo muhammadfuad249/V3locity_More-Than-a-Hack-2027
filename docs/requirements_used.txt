@@ -1,0 +1,11 @@
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+lightgbm==4.6.0
+xgboost==3.2.0
+catboost==1.2.10
+opencv-python-headless==5.0.0
+matplotlib==3.10.9
+torch==2.12.1+cu126
+ultralytics==8.4.183

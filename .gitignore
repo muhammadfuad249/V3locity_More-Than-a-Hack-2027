@@ -1,0 +1,35 @@
+# Competition data: not redistributable, never commit
+data/
+*.mp4
+*.zip
+*_atd.txt
+*_atd.xml
+*_smart_tagging.xml
+*_homography.csv
+
+# Notebook outputs, checkpoints, caches and runs
+work/
+runs*/
+checkpoints*/
+data_cache/
+vendor/
+run_*.ipynb
+.ipynb_checkpoints/
+
+# Model weights and YOLO artefacts (can be derived from the data)
+*.pt
+*.pth
+*.onnx
+*.engine
+datasets/
+dataset*/
+
+# Python / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+desktop.ini
+submission/
