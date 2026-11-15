@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.gif" alt="V3locity: ball possession, frame by frame" width="100%"/>
+<img src="https://cdn.jsdelivr.net/gh/muhammadfuad249/V3locity_More-Than-a-Hack-2027@main/assets/banner.gif" alt="V3locity: ball possession, frame by frame" width="100%"/>
 
 <br/>
 
