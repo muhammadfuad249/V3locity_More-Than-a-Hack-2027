@@ -1,3 +1,4 @@
+# Python 3.10 (submission run: 3.10.20). Versions pinned from the run that produced V3locity.csv.
 numpy==2.2.6
 pandas==2.3.3
 scipy==1.15.3
@@ -5,7 +6,15 @@ scikit-learn==1.7.2
 lightgbm==4.6.0
 xgboost==3.2.0
 catboost==1.2.10
-opencv-python-headless==5.0.0
 matplotlib==3.10.9
-torch==2.12.1+cu126
-ultralytics==8.4.183
+opencv-python-headless==5.0.*
+
+# Running the notebook headless
+jupyter
+nbconvert
+ipykernel
+
+# Only for the video scenario S6 (not needed for the submitted S2).
+# Install a CUDA build of torch from https://pytorch.org for GPU inference.
+# torch==2.12.1
+# ultralytics==8.4.183
