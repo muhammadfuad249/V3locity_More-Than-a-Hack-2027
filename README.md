@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="V3locity: ball possession, frame by frame" width="100%"/>
+<img src="assets/banner.gif" alt="V3locity: ball possession, frame by frame" width="100%"/>
 
 <br/>
 
@@ -163,7 +163,7 @@ Since the tracking loses the ball so often, we trained a single-class **YOLO** d
 git clone https://github.com/muhammadfuad249/V3locity_More-Than-a-Hack-2027.git
 cd V3locity_More-Than-a-Hack-2027
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r docs/requirements_used.txt
 ```
 
 **2. Add the official data bundle** (not included here, see [Data](#-data-and-competition-rules))
@@ -210,10 +210,11 @@ work/runs_v3/<RUN_ID>/scenarios/S2_XGBoost/
 ```bash
 sha256sum work/runs_v3/*/scenarios/S2_XGBoost/V3locity.csv
 # expected: 3fca39c4b618e106adebec913e90551e3c03cbe80eec793509e75f5ecca5022f
+# (the same hash as submission/V3locity.csv in this repository)
 ```
 
 > [!NOTE]
-> We pin seed 2027, `n_threads = 8` and GBDT on CPU. With the versions in `requirements.txt` our reruns produce the same file byte for byte. A different thread count or library version can change the floating-point order and therefore a few labels.
+> We pin seed 2027, `n_threads = 8` and GBDT on CPU. With the versions in `docs/requirements_used.txt` our reruns produce the same file byte for byte. A different thread count or library version can change the floating-point order and therefore a few labels.
 
 ---
 
@@ -221,15 +222,20 @@ sha256sum work/runs_v3/*/scenarios/S2_XGBoost/V3locity.csv
 
 ```text
 .
-├── MTAH2027_Possession_Scenarios_v3.ipynb   # the whole pipeline, scenarios S1 to S6
-├── requirements.txt                         # pinned versions used for the submission
-├── docs/
-│   ├── V3locity.pdf                         # short technical document
-│   └── V3locity.bib                         # references in BibTeX
 ├── assets/
-│   └── banner.svg
-├── LICENSE
-└── .gitignore                               # keeps data/, work/ and model weights out of git
+│   ├── banner.gif                              # animated banner
+│   └── banner.png                              # static fallback
+├── docs/
+│   ├── V3locity.pdf                            # short technical document (submitted)
+│   ├── V3locity.docx                           # editable version of the same document
+│   ├── V3locity.md                             # Markdown version of the same document
+│   └── requirements_used.txt                   # pinned versions used for the submission
+├── submission/
+│   └── V3locity.csv                            # the submitted possession file (frame,label)
+├── MTAH2027_Possession_Scenarios_v3.ipynb      # the pipeline used for the submission (S1 to S6)
+├── MTAH2027_Possession_Scenarios Final.ipynb   # earlier version (v2), kept for reference
+├── README.md
+└── .gitignore                                  # keeps data, runs, checkpoints and weights out of git
 ```
 
 ---
@@ -247,7 +253,7 @@ sha256sum work/runs_v3/*/scenarios/S2_XGBoost/V3locity.csv
 
 ## 📚 Technical document and references
 
-The full method, rules, limitations and reproduction notes are in **[docs/V3locity.pdf](docs/V3locity.pdf)**, with references in **[docs/V3locity.bib](docs/V3locity.bib)**.
+The full method, rules, limitations and reproduction notes are in **[docs/V3locity.pdf](docs/V3locity.pdf)** (also as [Word](docs/V3locity.docx) and [Markdown](docs/V3locity.md)).
 
 - IFAB. *Laws of the Game 2025/26*. The International Football Association Board, 2025.
 - Daniel Link and Martin Hoernig. "Individual ball possession in soccer." *PLoS ONE* 12(7): e0179953, 2017.
